@@ -1,0 +1,30 @@
+#container {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#container .target-text {
+    min-height: 50px;
+}
+
+#container .learner-keystrokes {
+    width: 600px;
+    margin: 0 auto 50px;
+    min-height: 200px;
+    border: 1px solid gray;
+    overflow-wrap: break-word;
+}
+
+#container button {
+    margin: 0 auto 50px;
+}
+
+.key-correct {
+    background-color: lightgreen;
+}
+
+.key-incorrect {
+    background-color: lightcoral;
+}
