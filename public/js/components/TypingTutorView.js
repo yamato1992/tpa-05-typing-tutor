@@ -3,6 +3,7 @@ import { removeChildNodes } from '../dom-utils.js';
 class TypingTutorView {
   constructor() {
     this.learnerKeystrokesEl = null;
+    this.typingScoreEl = null;
     this.callbacks = {};
   }
 
@@ -16,6 +17,7 @@ class TypingTutorView {
 
   initDOMAndListeners() {
     this.learnerKeystrokesEl = document.querySelector('.learner-keystrokes');
+    this.typingScoreEl = document.querySelector('.typing-score');
 
     document
       .querySelector('body')
@@ -52,6 +54,10 @@ class TypingTutorView {
     spanEl.innerText = typedChar;
     spanEl.className = (typedChar === targetChar) ? 'key-correct' : 'key-incorrect';
     this.learnerKeystrokesEl.appendChild(spanEl);
+  }
+
+  renderTypingScore(score) {
+    this.typingScoreEl.innerText = `Your score is ${score} %!!`;
   }
 }
 
